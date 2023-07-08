@@ -87,7 +87,36 @@ def depthFirstSearch(problem: SearchProblem):
     print("Start's successors:", problem.getSuccessors(problem.getStartState()))
     """
     "*** YOUR CODE HERE ***"
-    util.raiseNotDefined()
+    print("Start:", problem.getStartState())
+    print("Is the start a goal?", problem.isGoalState(problem.getStartState()))
+    print("Start's successors:", problem.getSuccessors(problem.getStartState()))
+
+    #create a class to find the parent
+    visited = []
+    path = []
+    pathStack = util.Stack()
+    frontier = util.Stack()
+    frontier.push((problem.getStartState(), None, None))
+    goal_found = problem.isGoalState(problem.getStartState())
+
+    while not goal_found:
+        node = frontier.pop()
+        print(node)
+        if problem.isGoalState(node[0]):
+            goal_found = True
+            print(True)
+            break
+        else:
+            visited.append(node)
+            for child in problem.getSuccessors(node[0]):
+                if(not (visited.__contains__(child) or frontier.list.__contains__(child))):
+                    frontier.push(child)
+                    ocPython = path + [child[1]]
+                    pathStack.push(ocPython)
+            path = pathStack.pop()
+    return path
+
+    #util.raiseNotDefined()
 
 def breadthFirstSearch(problem: SearchProblem):
     """Search the shallowest nodes in the search tree first."""
