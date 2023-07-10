@@ -1,4 +1,4 @@
-I thought this assignment was easy because all the algorithms are similar and there are not much challenges that we have to solve
-I wrote a dfs code according to the psuedocode we looked in the class
-I didn't think my path code would work but it did, I was lucky. I just added elemets to the path list similar to the frontier
+I thought this assignment was easy because all the algorithms are similar and there were not many challenges that we have to solve
+I wrote a dfs code according to the pseudocode we looked at in the class
+I didn't think my path code would work but it did, I was lucky. I just added elements to the path list similar to the frontier
 By changing the data structures used in the dfs code, I wrote the codes of other algorithms. (Queue for bfs, priorityQueue for a* and ucs)
